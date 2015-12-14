@@ -15,5 +15,3 @@ ENTRYPOINT ["iperf"]
 
 # iperf -s = run in Server mode
 CMD ["-s"]
-
-# docker run --restart=unless-stopped --name=iperf -d -p 5001:5001 mlabbe/iperf
