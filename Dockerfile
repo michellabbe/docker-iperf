@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Michel Labbé
+MAINTAINER Michel Labbe
 
 # build intial apk binary cache and install iperf
 RUN apk --update add iperf
