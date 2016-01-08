@@ -1,11 +1,11 @@
 [![Docker Stars](https://img.shields.io/docker/stars/mlabbe/iperf.svg)](https://hub.docker.com/r/mlabbe/iperf/) [![Docker Pulls](https://img.shields.io/docker/pulls/mlabbe/iperf.svg)](https://hub.docker.com/r/mlabbe/iperf/)
-
 docker: iperf
 =============
 
 This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool for benchmarking network performance.
 
 Total size of this image is only:
+
 [![](https://badge.imagelayers.io/mlabbe/iperf:latest.svg)](https://imagelayers.io/?images=mlabbe/iperf:latest)
 
 ### Pulling from Docker hub
