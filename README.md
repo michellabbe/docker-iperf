@@ -18,7 +18,7 @@ ________________________________________
 ### Running the image
 In order to run the iperf server, use the following:
 ```sh
-docker run --name=iperf -d -p 5001:5001 mlabbe/iperf
+docker run --restart=unless-stopped --name=iperf -d -p 5001:5001 mlabbe/iperf
 ```
 At that point, you can use your Docker server as an iperf server to begin
 benchmarking your network speeds.
