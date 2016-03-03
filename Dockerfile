@@ -5,7 +5,7 @@ MAINTAINER Michel Labbe
 
 # build intial apk binary cache and install iperf
 RUN apk --update add iperf   &&\
-    adduser -s /bin/false -D -H iperf
+    adduser -S iperf
 
 USER iperf
 
