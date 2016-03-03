@@ -2,7 +2,7 @@
 
 # docker: iperf
 
-This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool for benchmarking network performance.
+This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool in server mode for benchmarking network performance.
 
 Total size of this image is only:
 
