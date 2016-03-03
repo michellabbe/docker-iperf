@@ -1,9 +1,13 @@
 FROM alpine:latest
+#FROM alpine:3.3
 
 MAINTAINER Michel Labbe
 
 # build intial apk binary cache and install iperf
-RUN apk --update add iperf
+RUN apk --update add iperf   &&\
+    adduser -s /bin/false -D -H iperf
+
+USER iperf
 
 # Expose the default iperf2 server ports
 EXPOSE 5001
