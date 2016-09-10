@@ -1,15 +1,16 @@
 FROM alpine:latest
-#FROM alpine:3.3
+#FROM alpine:3.4
 
 MAINTAINER Michel Labbe
 
 # build intial apk binary cache and install iperf
-RUN apk --update add iperf   &&\
-    adduser -S iperf
+RUN apk --update add iperf \
+    && rm -rf /var/cache/apk/* \
+    && adduser -S iperf
 
 USER iperf
 
-# Expose the default iperf2 server ports
+# Expose the default iperf2 server port
 EXPOSE 5001
 
 # entrypoint allows you to pass your arguments to the container at runtime
