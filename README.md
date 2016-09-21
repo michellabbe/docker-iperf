@@ -6,7 +6,7 @@ This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/
 
 Total size of this image is only:
 
-[![](https://badge.imagelayers.io/mlabbe/iperf:latest.svg)](https://imagelayers.io/?images=mlabbe/iperf:latest)
+[![](https://images.microbadger.com/badges/image/mlabbe/iperf.svg)](https://microbadger.com/images/mlabbe/iperf)
 
 ________________________________________
 ### Pulling from Docker hub
