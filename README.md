@@ -4,6 +4,16 @@
 
 This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool in server mode for benchmarking network performance.
 
+```sh
+------------------------------------------------------------
+Client connecting to speedtest.mydomain.local, TCP port 5001
+TCP window size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.100 port 53912 connected with 192.168.1.50 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  1.10 GBytes   941 Mbits/sec
+```
+
 - Runs as non-root user
 - Small image size
 - Small number of layers
