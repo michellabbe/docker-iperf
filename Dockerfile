@@ -4,7 +4,7 @@ FROM alpine:latest
 MAINTAINER Michel Labbe
 
 # build intial apk binary cache and install iperf
-RUN apk add --no-cache iperf
+RUN apk add --no-cache iperf \
     && adduser -S iperf
 
 USER iperf
