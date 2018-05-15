@@ -17,6 +17,7 @@ TCP window size:  208 KByte (default)
 - Runs as non-root user
 - Small image size
 - Small number of layers
+- Supports TCP and UDP
 
 Total size of this image is only:
 
@@ -32,7 +33,7 @@ ________________________________________
 ### Running the image
 In order to run the iperf server, use the following:
 ```sh
-docker run --restart=unless-stopped --name=iperf -d -p 5001:5001 mlabbe/iperf
+docker run --restart=unless-stopped --name=iperf -d -p 5001:5001/tcp -p 5001:5001/udp mlabbe/iperf
 ```
 At that point, you can use your Docker server as an iperf server to begin
 benchmarking your network speeds.
