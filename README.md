@@ -5,7 +5,7 @@
 This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool in server mode.
 iPerf (iPerf v2) is a tool for active measurements of the maximum achievable bandwidth on IP networks.
 It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, with IPv4 and IPv6).
-For each test it reports the bandwidth, loss, and other parameters.
+For each test it reports the bandwidth and other parameters.
 
 ________________________________________
 ```sh
@@ -54,5 +54,4 @@ In order to run the iperf server, use the following:
 ```sh
 docker run --restart=unless-stopped --name=iperf -d -p 5001:5001/tcp -p 5001:5001/udp mlabbe/iperf
 ```
-At that point, you can use your Docker server as an iperf server to begin
-benchmarking your network speeds.
+At that point, you can use your Docker server as an iperf server to begin testing your network.
