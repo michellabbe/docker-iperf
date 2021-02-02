@@ -1,7 +1,7 @@
 FROM alpine:latest
-#FROM alpine:3.13.0
+#FROM alpine:3.13.1
 
-MAINTAINER Michel Labbe
+LABEL maintainer="Michel Labbe"
 
 # build intial apk binary cache and install iperf
 RUN apk add --no-cache iperf \
@@ -16,6 +16,11 @@ EXPOSE 5001/tcp 5001/udp
 # very similar to a binary you would run. For example, in the following
 # docker run -it <IMAGE> --help' is like running 'iperf --help'
 ENTRYPOINT ["iperf"]
+
+# Health check floods log window quite a bit.
+# If needed you can change/disable health check when starting container.
+# See Docker run reference documentation for more information.
+HEALTHCHECK CMD iperf -n 1 -c 127.0.0.1 || exit 1
 
 # iperf -s = run in Server mode
 CMD ["-s"]
