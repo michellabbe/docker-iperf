@@ -1,6 +1,8 @@
-[![Docker Stars](https://img.shields.io/docker/stars/mlabbe/iperf.svg)](https://hub.docker.com/r/mlabbe/iperf/) [![Docker Pulls](https://img.shields.io/docker/pulls/mlabbe/iperf.svg)](https://hub.docker.com/r/mlabbe/iperf/)
+# iperf
 
-# docker: iperf
+[![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/mlabbe/iperf/latest?logo=docker)](https://hub.docker.com/r/mlabbe/iperf "Docker Hub Repository") ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/mlabbe/iperf/latest?logo=docker) ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/mlabbe/iperf/latest?logo=docker) ![User Privilege](https://img.shields.io/badge/user%20privilege-non--root-success?logo=docker) ![Health Check](https://img.shields.io/badge/health%20check-yes-success?logo=docker)  
+![Docker Pulls](https://img.shields.io/docker/pulls/mlabbe/iperf?logo=docker) ![Docker Stars](https://img.shields.io/docker/stars/mlabbe/iperf?logo=docker) ![GitHub License](https://img.shields.io/github/license/michellabbe/docker-iperf?logo=github) 
+
 
 This is a Docker image to run the [iperf](http://sourceforge.net/projects/iperf/) commandline tool in server mode.
 iPerf (iPerf v2) is a tool for active measurements of the maximum achievable bandwidth on IP networks.
@@ -37,10 +39,7 @@ ________________________________________
 - Small image size
 - Small number of layers
 - Supports TCP and UDP
-
-Total size of this image is only:
-
-[![](https://images.microbadger.com/badges/image/mlabbe/iperf.svg)](https://microbadger.com/images/mlabbe/iperf)
+- Healthcheck support
 
 ________________________________________
 ### Pulling from Docker hub
