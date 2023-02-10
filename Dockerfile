@@ -1,6 +1,4 @@
-FROM alpine:3.14.6
-#Current alpine:latest has some vulnerabilities, 3.14.6 has none
-#FROM alpine:3.14.6
+FROM alpine:3.17.1
 
 LABEL maintainer="Michel Labbe"
 
@@ -21,7 +19,10 @@ ENTRYPOINT ["iperf"]
 # Health check floods log window quite a bit.
 # If needed you can change/disable health check when starting container.
 # See Docker run reference documentation for more information.
-HEALTHCHECK CMD iperf -n 1 -c 127.0.0.1 || exit 1
+
+# As of iperf 2.1.8, "iperf -n" used with less than 60 bytes seems to run infinitely
+#HEALTHCHECK CMD iperf -n 1 -c 127.0.0.1 || exit 1
+HEALTHCHECK CMD iperf -t 1 -n 60 -b 8 -l 1 -c 127.0.0.1 || exit 1
 
 # iperf -s = run in Server mode
 CMD ["-s"]
