@@ -22,7 +22,7 @@ ENTRYPOINT ["iperf"]
 
 # As of iperf 2.1.8, "iperf -n" used with less than 60 bytes seems to run infinitely
 #HEALTHCHECK CMD iperf -n 1 -c 127.0.0.1 || exit 1
-HEALTHCHECK CMD iperf -t 1 -n 60 -b 8 -l 1 -c 127.0.0.1 || exit 1
+HEALTHCHECK CMD iperf -t 1 -b 8 -l 1 -c 127.0.0.1 || exit 1
 
 # iperf -s = run in Server mode
 CMD ["-s"]
