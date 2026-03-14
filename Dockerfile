@@ -1,4 +1,6 @@
-FROM alpine:3.21.3
+ARG BASE_IMAGE=alpine
+ARG BASE_IMAGE_VERSION=3.23.3
+FROM ${BASE_IMAGE}:${BASE_IMAGE_VERSION}
 
 LABEL maintainer="Michel Labbe"
 
@@ -11,11 +13,6 @@ USER iperf
 # Expose the default iperf2 server port
 EXPOSE 5001/tcp 5001/udp
 
-# entrypoint allows you to pass your arguments to the container at runtime
-# very similar to a binary you would run. For example, in the following
-# docker run -it <IMAGE> --help' is like running 'iperf --help'
-ENTRYPOINT ["iperf"]
-
 # Health check floods log window quite a bit.
 # If needed you can change/disable health check when starting container.
 # See Docker run reference documentation for more information.
@@ -25,4 +22,5 @@ ENTRYPOINT ["iperf"]
 HEALTHCHECK CMD iperf -t 1 -b 8 -l 1 -c 127.0.0.1 || exit 1
 
 # iperf -s = run in Server mode
+ENTRYPOINT ["iperf"]
 CMD ["-s"]
